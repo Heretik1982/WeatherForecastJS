@@ -1,5 +1,5 @@
 // API configuration
-const apiKey = '3f2869114448fe61ddd406b46e7b14fa'; // Replace with your OpenWeatherMap API key
+const apiKey = process.env.OPENWEATHERMAP_API_KEY || ''; // Use environment variable for API key
 const weatherBaseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const forecastBaseUrl = 'https://api.openweathermap.org/data/2.5/forecast';
 
