@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App Dashboard</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- Include Leaflet CSS for the map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Weather App</h1>
+      <nav>
+        <ul>
+          <li><a href="#" id="dashboardTab" class="active">Dashboard</a></li>
+          <li><a href="#" id="forecastTab">Forecast & Map</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Dashboard View -->
+    <section id="dashboardView">
+      <div class="search-bar">
+        <input type="text" id="townInput" placeholder="Enter town name" />
+        <button id="addTownBtn" aria-label="Add town to dashboard">Add Town</button>
+      </div>
+      <div id="townsContainer">
+        <!-- Town cards will be added here -->
+      </div>
+    </section>
+
+    <!-- Forecast & Map View -->
+    <section id="forecastView" class="hidden">
+      <div class="search-bar">
+        <input type="text" id="forecastTownInput" placeholder="Enter town name" />
+        <button id="getForecastBtn">Get Forecast</button>
+      </div>
+      <div id="forecastContainer">
+        <!-- Forecast details will be shown here -->
+      </div>
+      <div id="map" class="map"></div>
+    </section>
+  </div>
+
+  <!-- Include Leaflet JS for the map -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
